@@ -7,3 +7,4 @@ torch
 sentencepiece
 tokenizers>=0.13.3
 wandb
+together==1.3.5

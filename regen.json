@@ -1,0 +1,488 @@
+[
+    {
+        "instruction": "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?",
+        "input": "Bạn là hiệu trưởng trường ĐH Sư phạm Hà Nội, muốn xuất hiện trên bảng điểm của sinh viên và kiểm soát thời gian các bạn vào lớp trực tuyến nhằm đánh giá sự thizzu của sinh viên. Bạn có thể bật thuật toán xác thực sinh viên bằng VSTEP để kiểm soát trên hệ thống kiểm soát sinh viên của trường là gì?",
+        "output": "Tham khảo hướng dẫn bật thuật toán xác thực sinh viên bằng VSTEP tại địa chỉ: https://vstep.vn/thiet-lap-thu-at-toan-xac-thuc-sinh-vien-bang-vstep.",
+        "most_similar_instructions": {
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.24390243902439024,
+            "So sánh các chứng chỉ sau:": 0.20689655172413793,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.20512820512820512,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.2,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.16216216216216214,
+            "Kỳ thi VSTEP là gì?": 0.08000000000000002
+        },
+        "avg_similarity_score": 0.18617393759530004
+    },
+    {
+        "instruction": "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?",
+        "input": "Bạn là Hiệu trưởng trường ĐH Ngoại thương, muốn quản lý giờ nghỉ của sinh viên để đánh giá sự thizzu của sinh viên. Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP là gì?",
+        "output": "Bạn có thể bật chế độ quản lý giờ nghỉ của sinh viên bằng VSTEP trên hệ thống kiểm soát sinh viên của trường để có thể kiểm soát giờ nghỉ của sinh viên để đánh giá sự thizzu của sinh viên.",
+        "most_similar_instructions": {
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.65,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.24390243902439024,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.2162162162162162,
+            "So sánh các chứng chỉ sau:": 0.20689655172413793,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.20512820512820512,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.2,
+            "Kỳ thi VSTEP là gì?": 0.08000000000000002
+        },
+        "avg_similarity_score": 0.2509089521526443
+    },
+    {
+        "instruction": "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?",
+        "input": "Bạn là Hiệu trưởng trường ĐH Kinh tế Quốc dân, muốn quản lý sinh viên có điểm thấp để đánh giá sự thizzu của sinh viên. Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP là gì?",
+        "output": "Bạn có thể bật chế độ quản lý điểm sinh viên trên hệ thống kiểm soát sinh viên của trường để có thể kiểm soát số điểm của sinh viên để đánh giá sự thizzu của sinh viên.",
+        "most_similar_instructions": {
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.6,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.6,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.25641025641025644,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.24390243902439024,
+            "So sánh các chứng chỉ sau:": 0.20689655172413793,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.2,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.16216216216216214,
+            "Kỳ thi VSTEP là gì?": 0.08000000000000002
+        },
+        "avg_similarity_score": 0.28953129619235596
+    },
+    {
+        "instruction": "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?",
+        "input": "Bạn là Hiệu trưởng trường ĐH Kinh tế và quản lý, muốn quản lý sinh viên đăng ký học các khóa học nào để đánh giá sự thizzu của sinh viên. Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP là gì?",
+        "output": "Bạn có thể bật chế độ quản lý khóa học trên hệ thống kiểm soát sinh viên của trường để có thể kiểm soát khóa học của sinh viên để đánh giá sự thizzu của sinh viên.",
+        "most_similar_instructions": {
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.6808510638297872,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.5106382978723405,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.5106382978723405,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.25,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.22727272727272727,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.17391304347826086,
+            "So sánh các chứng chỉ sau:": 0.16666666666666666,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.16216216216216217,
+            "Kỳ thi VSTEP là gì?": 0.125
+        },
+        "avg_similarity_score": 0.2981055302632546
+    },
+    {
+        "instruction": "So sánh kỳ thi VSTEP và IELTS",
+        "input": "chứng chỉ IELTS và kỳ thi VSTEP",
+        "output": "Ba sự khác biệt chính giữa kỳ thi VSTEP và IELTS:\n1. Mục tiêu: Kỳ thi VSTEP đánh giá năng lực tiếng Anh theo Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam trong khi chứng chỉ IELTS đánh giá năng lực tiếng Anh quốc tế theo CEFR. \n2. Phạm vi áp dụng: Kỳ thi VSTEP thường được áp dụng trong nước, trong khi chứng chỉ IELTS được sử dụng trên toàn thế giới.\n3. Cấu trúc đề thi: Kỳ thi VSTEP có 4 phần thi là Nghe, Đọc, Viết, Nói với điểm số từ 0-5, trong khi chứng chỉ IELTS có 4 phần thi là Nghe, Đọc, Viết, Nói với điểm số từ 0-9.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP là gì?": 0.4615384615384615,
+            "So sánh các chứng chỉ sau:": 0.35294117647058826,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.31999999999999995,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.14285714285714288,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.13793103448275862,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.11428571428571428,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.11111111111111112,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.07407407407407407,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.07142857142857144
+        },
+        "avg_similarity_score": 0.17560635743191522
+    },
+    {
+        "instruction": "Tại sao nên tham gia kỳ thi VSTEP?",
+        "input": "",
+        "output": "Điều gì khiến kỳ thi VSTEP trở nên cần thiết:\n1. Đánh giá năng lực tiếng Anh chính xác, phản ánh được trình độ của thí sinh.\n2. Là công cụ để đánh giá năng lực tiếng Anh trong môi trường học thuật và thực tiễn ở Việt Nam.\n3. Nghiên cứu và phân tích dữ liệu từ kỳ thi để có cái nhìn khách quan về năng lực tiếng Anh của sinh viên.\n4. Công cụ để đánh giá năng lực tiếng Anh trong môi trường công sở và thực tiễn ở Việt Nam.\n5. Sự chuẩn hóa trong đánh giá năng lực tiếng Anh.\n6. Kỳ thi tiếng Anh được thực hiện bởi hệ thống giáo dục và quản lý cấp cao.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP là gì?": 0.4,
+            "So sánh kỳ thi VSTEP và IELTS": 0.33333333333333326,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.26666666666666666,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.22222222222222224,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.21621621621621623,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.2,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.2,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.19354838709677416,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.10000000000000002,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.06896551724137931
+        },
+        "avg_similarity_score": 0.18915982166816425
+    },
+    {
+        "instruction": "Khi nào nên tham gia kỳ thi VSTEP?",
+        "input": "",
+        "output": "Kỳ thi VSTEP được tổ chức cuộc năm một lần và có ba kỳ thi chính:\n1. Kỳ thi vào lớp 10: diễn ra vào mùa thu của khoảng thời gian có 6 tháng gần nhất, để cung cấp cho giáo viên, phụ huynh và học sinh những thông tin bổ ích về người học để giáo viên có thể chuẩn bị kỹ càng, phụ huynh có kế hoạch cho con, học sinh chuẩn bị cho năm học mới.\n2. Kỳ thi vào lớp 6: diễn ra vào mùa thu của khoảng thời gian có 6 tháng gần nhất, để cung cấp cho giáo viên, phụ huynh và học sinh những thông tin bổ ích về người học để giáo viên có thể chuẩn bị kỹ càng, phụ huynh có kế hoạch cho con, học sinh chuẩn bị cho năm học mới.\n3. Kỳ thi tuyển sinh đại học: diễn ra vào khoảng ngày 1, 15 tháng 8 hàng năm để giúp các trường đại học tuyển sinh đầu vào.",
+        "most_similar_instructions": {
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.7,
+            "Kỳ thi VSTEP là gì?": 0.4,
+            "So sánh kỳ thi VSTEP và IELTS": 0.33333333333333326,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.2702702702702703,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.26666666666666666,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.22222222222222224,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.2,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.2,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.10000000000000002,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.06896551724137931
+        },
+        "avg_similarity_score": 0.2226876658467315
+    },
+    {
+        "instruction": "So sánh kỳ thi TOEFL và kỳ thi VSTEP",
+        "input": "chứng chỉ TOEFL",
+        "output": "Mặc dù kỳ thi VSTEP và kỳ thi TOEFL đều là những kỳ thi đánh giá tiếng Anh, chúng có một số điểm khác biệt:\n1. Mục tiêu: Kỳ thi VSTEP đánh giá năng lực tiếng Anh theo Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam trong khi kỳ thi TOEFL đánh giá tiếng Anh quốc tế theo tiêu chuẩn CEFR.\n2. Phạm vi áp dụng: Kỳ thi VSTEP thường được áp dụng trong nước, trong khi kỳ thi TOEFL được sử dụng trên toàn thế giới.\n3. Cấu trúc đề thi: cả hai kỳ thi đều có bốn phần thi là Nghe, Đọc, Viết, Nói, nhưng điểm số và quy trình thi khác nhau.\n4. Tiêu chí đánh giá: Kỳ thi VSTEP tập trung vào những kỹ năng ngữ pháp, từ vựng và khả năng giao tiếp trong ngữ cảnh học thuật và thực tiễn ở Việt Nam, trong khi kỳ thi TOEFL đánh giá toàn diện tất cả các kỹ năng ngôn ngữ (nghe, đọc, viết và nói) trong ngữ cảnh quốc tế.\n5. Quy trình thi: Bản đề thi và thời gian thi khác nhau, vì vậy thí sinh nên kiểm tra thông tin cụ thể trước khi tham gia.\n6. Kết quả: Kỳ thi VSTEP đánh giá năng lực tiếng Anh theo mức độ 3-5 và chứng chỉ TOEFL đánh giá theo hệ số điểm 0-1",
+        "most_similar_instructions": {
+            "So sánh kỳ thi VSTEP và IELTS": 0.6666666666666665,
+            "Kỳ thi VSTEP là gì?": 0.4,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.37037037037037035,
+            "So sánh các chứng chỉ sau:": 0.3157894736842105,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.3,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.3,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.13333333333333333,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.12903225806451613,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.10810810810810811,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.10000000000000002
+        },
+        "avg_similarity_score": 0.2210403270030926
+    },
+    {
+        "instruction": "VSTEP sẽ được sử dụng trong trường hợp nào?",
+        "input": "Một sinh viên đang học tại trường đại học với mục tiêu tốt nghiệp lấy bằng đại học.",
+        "output": "Kỳ thi VSTEP sẽ được sử dụng để đánh giá năng lực tiếng Anh của sinh viên trong mục tiêu tốt nghiệp lấy bằng đại học tại các trường đại học ở Việt Nam.",
+        "most_similar_instructions": {
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.2941176470588235,
+            "So sánh các chứng chỉ sau:": 0.27272727272727276,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.2608695652173913,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.25,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.20000000000000004,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.18181818181818185,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.18181818181818185,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.18181818181818185,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.17391304347826086,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.125
+        },
+        "avg_similarity_score": 0.1751562882509174
+    },
+    {
+        "instruction": "VSTEP gồm bao nhiêu phần và phần nào là khó nhất?",
+        "input": "Một sinh viên đang học tại trường cao đẳng với mục tiêu tốt nghiệp lấy bằng cao đẳng",
+        "output": "VSTEP gồm 4 phần: Nghe, Đọc, Viết và Nói. Phần khó nhất trong kỳ thi VSTEP thường là phần Nói vì nó đòi hỏi sinh viên phải thể hiện khả năng nói tiếng Anh một cách tự tin và chính xác.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.29411764705882354,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.22727272727272727,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.22222222222222224,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.22222222222222224,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.2222222222222222,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.2162162162162162,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.21052631578947367,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.20000000000000004,
+            "Kỳ thi VSTEP là gì?": 0.1818181818181818
+        },
+        "avg_similarity_score": 0.18764435003212093
+    },
+    {
+        "instruction": "VSTEP bao gồm các phần nào?",
+        "input": "Một sinh viên đang học tại trường trung cấp với mục tiêu tốt nghiệp lấy bằng trung cấp",
+        "output": "VSTEP gồm 4 phần: Nghe, Đọc, Viết và Nói. Những phần này giúp đánh giá toàn diện khả năng ngoại ngữ của sinh viên.",
+        "most_similar_instructions": {
+            "VSTEP gồm bao nhiêu phần và phần nào là khó nhất?": 0.5185185185185185,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.4444444444444445,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.34782608695652173,
+            "Kỳ thi VSTEP là gì?": 0.26666666666666666,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.21621621621621623,
+            "So sánh các chứng chỉ sau:": 0.2105263157894737,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.20000000000000004,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.20000000000000004,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.20000000000000004,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.2
+        },
+        "avg_similarity_score": 0.22471786392546975
+    },
+    {
+        "instruction": "Kỳ thi VSTEP có thể được sử dụng như thế nào?",
+        "input": "Một doanh nghiệp muốn tuyển dụng nhân viên có kỹ năng ngoại ngữ cao",
+        "output": "Kỳ thi VSTEP có thể được sử dụng như một công cụ đánh giá kỹ năng ngoại ngữ của ứng viên, giúp doanh nghiệp tuyển chọn được nhân viên phù hợp nhất.",
+        "most_similar_instructions": {
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.5384615384615384,
+            "VSTEP bao gồm các phần nào?": 0.4347826086956522,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.4000000000000001,
+            "Kỳ thi VSTEP là gì?": 0.33333333333333337,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.30303030303030304,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.2941176470588235,
+            "So sánh kỳ thi VSTEP và IELTS": 0.2857142857142857,
+            "So sánh các chứng chỉ sau:": 0.27272727272727276,
+            "So sánh kỳ thi TOEFL và kỳ thi VSTEP": 0.2608695652173913,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.2608695652173913
+        },
+        "avg_similarity_score": 0.29669409637440336
+    },
+    {
+        "instruction": "Kỳ thi VSTEP bao gồm thời gian nào?",
+        "input": "Một sinh viên đang học tại trường đại học với mục tiêu tốt nghiệp lấy bằng đại học",
+        "output": "Kỳ thi VSTEP thường kéo dài khoảng 2-3 giờ, tùy thuộc vào số phần và thời gian từng phần.",
+        "most_similar_instructions": {
+            "VSTEP bao gồm các phần nào?": 0.5714285714285713,
+            "Kỳ thi VSTEP là gì?": 0.5000000000000001,
+            "Kỳ thi VSTEP có thể được sử dụng như thế nào?": 0.4999999999999999,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.42857142857142855,
+            "VSTEP gồm bao nhiêu phần và phần nào là khó nhất?": 0.35714285714285715,
+            "So sánh kỳ thi VSTEP và IELTS": 0.3157894736842105,
+            "So sánh kỳ thi TOEFL và kỳ thi VSTEP": 0.28571428571428564,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.28571428571428564,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.28571428571428564,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.24999999999999994
+        },
+        "avg_similarity_score": 0.251256643306058
+    },
+    {
+        "instruction": "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?",
+        "input": "Một sinh viên đang học tại trường đại học với mục tiêu tốt nghiệp lấy bằng đại học",
+        "output": "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của sinh viên trong các trường đại học ở Việt Nam.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP có thể được sử dụng như thế nào?": 0.5625,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.3888888888888889,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.37499999999999994,
+            "Kỳ thi VSTEP là gì?": 0.3333333333333333,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.3157894736842105,
+            "So sánh các chứng chỉ sau:": 0.2857142857142857,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.27586206896551724,
+            "Kỳ thi VSTEP bao gồm thời gian nào?": 0.26666666666666666,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.2608695652173913
+        },
+        "avg_similarity_score": 0.27824187849443316
+    },
+    {
+        "instruction": "Nhận xét về khả năng tiếng Anh của sinh viên Việt Nam",
+        "input": "Sinh viên Việt Nam nắm bắt cơ bản kiến thức tiếng Anh dễ dàng hơn các bạn sinh viên nước ngoài",
+        "output": "Sinh viên Việt Nam có nền tảng tiếng Anh vốn dĩ tốt hơn so với các bạn sinh viên nước ngoài. Tuy nhiên, khả năng sử dụng tiếng Anh của sinh viên Việt Nam sau khi ra trường vẫn còn nhiều hạn chế.\nDần dần, các bạn sinh viên Việt Nam hiện nay lại đang trở nên thông thạo tiếng Anh hơn những thầy cô giáo trẻ trong nhà trường, thậm chí các bạn sinh viên còn thông thạo tiếng Anh hơn các thầy cô giáo người Việt Nam, đặc biệt là khi áp dụng những phương pháp học tiếng Anh hiện đại.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.42105263157894735,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.3684210526315789,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.358974358974359,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.3076923076923077,
+            "VSTEP gồm bao nhiêu phần và phần nào là khó nhất?": 0.27777777777777773,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.2608695652173913,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.25641025641025644,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.25,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.2222222222222222
+        },
+        "avg_similarity_score": 0.22183642414030041
+    },
+    {
+        "instruction": "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:",
+        "input": "VSTEP là kỳ thi đánh giá năng lực tiếng Anh quốc tế",
+        "output": "VSTEP là Kỳ thi đánh giá năng lực tiếng Anh quốc tế\n\nLà Kỳ thi đánh giá năng lực tiếng Anh quốc tế có uy tín nhất tại Việt Nam trong nhiều năm liền, VSTEP (Vietnamese Standardized Test of English Proficiency) đã trở thành lựa chọn hàng đầu của sinh viên Việt Nam khi muốn đi du học nước ngoài.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.3137254901960784,
+            "Nhận xét về khả năng tiếng Anh của sinh viên Việt Nam": 0.2745098039215686,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.2711864406779661,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.2692307692307692,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.2692307692307692,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.24489795918367344,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.23809523809523808,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.23076923076923075,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.22641509433962265,
+            "Kỳ thi VSTEP có thể được sử dụng như thế nào?": 0.22222222222222224
+        },
+        "avg_similarity_score": 0.2055423796579264
+    },
+    {
+        "instruction": "Chứng chỉ VSTEP có giá trị như thế nào so với chứng chỉ chỉ IELTS?",
+        "input": "",
+        "output": "Chứng chỉ VSTEP (Vietnamese Standardized Test of English Proficiency) và chứng chỉ IELTS (International English Language Testing System) đều đánh giá năng lực tiếng Anh, nhưng chúng có giá trị và mục đích khác nhau.\nVSTEP:\n - Được thiết kế cho nhu cầu ngôn ngữ tiếng Anh trong nước (Việt Nam) và phục vụ các mục đích như giáo dục, công việc và chứng chỉ chức vụ.\n - Là kỳ thi đánh giá năng lực tiếng Anh theo Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam, được phát triển bởi Bộ Giáo dục và Đào tạo (MOET).\n - Đánh giá trình độ từ B1 đến C1 (bậc 3 đến 5) và bao gồm các kỹ năng Nghe, Đọc, Viết, Nói.\n - Chứng chỉ được công nhận trong nước và áp dụng ở các trường đại học, tổ chức và cơ quan tại Việt Nam.\n - Chi phí tương đối thấp, khoảng 1-2 triệu đồng.\n - Thay đổi theo thời gian, tùy thuộc vào yêu cầu của cơ quan, doanh nghiệp, cơ sở đào tạo.\n -\nIelts:\n - Đánh giá năng lực tiếng Anh quốc tế theo tiêu chuẩn CEFR (Common European Framework of Reference for Languages).\n - Là kỳ thi đánh giá tiếng Anh để du học, định cư và công việc trên toàn thế giới (chứng chỉ được chấp nhận bởi các trường đại học, tổ chức và chính phủ quốc tế).\n - Đánh giá trình độ từ Không có cấp độ thấp nhất (A2) đến cấp độ cao nhất (C2), bao gồm các kỹ năng Nghe, Đọc, Viết, Nói.\n - Chứng chỉ được công nhận trên toàn cầu và áp dụng ở tất cả các trường đại học, tổ chức và cơ quan quốc tế.\n - Chi phí cao hơn, khoảng 5-6 triệu đồng.\n - Thời hạn hiệu lực thường là hai năm, tùy thuộc vào yêu cầu của cơ quan chấp nhận chứng chỉ.\n\nKết luận\nTóm lại, chứng chỉ VSTEP có giá trị và mục đích khác so với chứng chỉ IELTS. Chứng chỉ VSTEP phù hợp cho nhu cầu ngôn ngữ tiếng Anh trong nước, trong khi chứng chỉ IELTS cần thiết để hội nhập quốc tế và du học, định cư.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP có thể được sử dụng như thế nào?": 0.37499999999999994,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.3448275862068966,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.3125,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.3,
+            "So sánh các chứng chỉ sau:": 0.2857142857142857,
+            "VSTEP bao gồm các phần nào?": 0.27586206896551724,
+            "Kỳ thi VSTEP bao gồm thời gian nào?": 0.26666666666666666,
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.2631578947368421,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.25641025641025644,
+            "So sánh kỳ thi VSTEP và IELTS": 0.22222222222222218
+        },
+        "avg_similarity_score": 0.2191621284605407
+    },
+    {
+        "instruction": "Những loại chứng chỉ nào có giá trị sau 2 năm kể từ ngày thi?",
+        "input": "",
+        "output": "Sau 2 năm kể từ ngày thi, nhiều loại chứng chỉ tiếng Anh mất giá trị. Dưới đây là một số ví dụ:\nChứng chỉ IELTS:\n - Thời hạn hiệu lực là 2 năm tính từ ngày thi.\n - Nếu muốn sử dụng chứng chỉ, bạn cần phải thi lại hoặc cung cấp chứng chỉ mới.\nChứng chỉ TOEFL:\n - Thời hạn hiệu lực là 2 năm tính từ ngày thi.\n - Chi phí thi lại thấp hơn so với chứng chỉ mới.\nChứng chỉ VSTEP:\n - Được coi là có giá trị vĩnh viễn nếu không có yêu cầu đăng ký cụ thể.\n - Tuy nhiên, để đảm bảo tính hiệu lực, bạn nên kiểm tra chính thức với cơ quan chấp nhận chứng chỉ.\nChứng chỉ Đánh giá năng lực tiếng Anh của Đại học Quốc gia Hà Nội:\n - Thời hạn hiệu lực là 2 năm tính từ ngày thi.\n - Chi phí thi lại thấp hơn so với chứng chỉ mới.\nLưu ý: Đối với nhiều cơ quan, doanh nghiệp, cơ sở đào tạo, chứng chỉ VSTEP có thể vẫn giữ giá trị sau 2 năm. Tuy nhiên, tốt nhất bạn nên kiểm tra trực tiếp với cơ quan chấp nhận chứng chỉ để đảm bảo tính hiệu lực.\n\nKết luận\nSau 2 năm kể từ ngày thi, nhiều loại chứng chỉ tiếng Anh mất giá trị. Để tránh sự nhầm lẫn, bạn nên kiểm tra chính thức với cơ quan chấp nhận chứng chỉ để đảm bảo tính hiệu lực của chứng chỉ.",
+        "most_similar_instructions": {
+            "Chứng chỉ VSTEP có giá trị như thế nào so với chứng chỉ chỉ IELTS?": 0.4,
+            "So sánh các chứng chỉ sau:": 0.33333333333333326,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.3225806451612903,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.3225806451612903,
+            "Nhận xét về khả năng tiếng Anh của sinh viên Việt Nam": 0.3,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.25806451612903225,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.25,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.24390243902439024,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.24390243902439024
+        },
+        "avg_similarity_score": 0.23199446024807246
+    },
+    {
+        "instruction": "Chỉ ra những điểm khác nhau giữa VSTEP và IELTS",
+        "input": "",
+        "output": "VSTEP (Vietnamese Standardized Test of English Proficiency) và IELTS (International English Language Testing System) là hai kỳ thi đánh giá năng lực tiếng Anh khác nhau. Dưới đây là một số điểm khác nhau giữa chúng:\n1. Mục tiêu\nVSTEP: Đánh giá năng lực tiếng Anh theo khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam, thường áp dụng cho giáo dục và công việc trong nước.\nIELTS: Đánh giá tiếng Anh quốc tế theo tiêu chuẩn CEFR (Common European Framework of Reference for Languages).\n2. Cấu trúc bài thi\nVSTEP: Nghe, Đọc, Viết, Nói, đánh giá trình độ từ B1-C1 (bậc 3-5).\nIELTS: Nghe, Đọc, Viết, Nói, đánh giá trình độ từ Không có cấp độ thấp nhất (A2) đến cấp độ cao nhất (C2).\n3. Phạm vi công nhận\nVSTEP: Được công nhận trong nước, áp dụng ở các trường đại học, tổ chức và cơ quan tại Việt Nam.\nIELTS: Được công nhận trên toàn cầu bởi các trường đại học, tổ chức và chính phủ quốc tế.\n4. Thời gian thi\nVSTEP: Thời gian thi thường là 2-3 giờ.\nIELTS: Thời gian thi thường là 3 giờ.\n5. Chi phí\nV STEP: Chi phí thi thường là 1-2 triệu đồng.\nIELTS: Chi phí thi thường là 5-6 triệu đồng.\n6. Thời hạn hiệu lực\nV STEP: Chứng chỉ được coi là có giá trị vĩnh viễn nếu không có yêu cầu đăng ký cụ thể.\nIELTS: Thời hạn hiệu lực là 2 năm tính từ ngày thi\n\nKết luận\nVSTEP và IELTS là hai kỳ thi đánh giá năng lực tiếng Anh khác nhau về mục tiêu, cấu trúc bài thi, phạm vi công nhận, thời gian thi, chi phí và thời hạn hiệu lực.",
+        "most_similar_instructions": {
+            "Chứng chỉ VSTEP có giá trị như thế nào so với chứng chỉ chỉ IELTS?": 0.36363636363636365,
+            "So sánh kỳ thi VSTEP và IELTS": 0.36363636363636365,
+            "Những loại chứng chỉ nào có giá trị sau 2 năm kể từ ngày thi?": 0.2857142857142857,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.25,
+            "Nhận xét về khả năng tiếng Anh của sinh viên Việt Nam": 0.24242424242424243,
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.24242424242424243,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.23529411764705882,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.22857142857142854,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.1951219512195122,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.1935483870967742
+        },
+        "avg_similarity_score": 0.184330004663726
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"",
+        "input": "Tôi là giáo viên",
+        "output": "Đúng vậy, nếu bạn là giáo viên thì cần sở hữu chứng chỉ tiếng Anh VSTEP. Chứng chỉ này được công nhận bởi Bộ Giáo dục và Đào tạo, hỗ trợ phát triển kỹ năng ngôn ngữ thay đổi ở bạn. Do đó, nếu bạn là giáo viên, bạn cần có chứng chỉ VSTEP để đảm bảo trình độ tiếng Anh của bạn đáp ứng yêu cầu công việc.",
+        "most_similar_instructions": {
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.4528301886792453,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.4406779661016949,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.42307692307692313,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.38461538461538464,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.34615384615384615,
+            "Chứng chỉ VSTEP có giá trị như thế nào so với chứng chỉ chỉ IELTS?": 0.2745098039215686,
+            "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:": 0.25,
+            "So sánh các chứng chỉ sau:": 0.24390243902439024,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.23809523809523808,
+            "Khi nào nên tham gia kỳ thi VSTEP?": 0.23809523809523808
+        },
+        "avg_similarity_score": 0.2336978286333144
+    },
+    {
+        "instruction": "Câu hỏi này yêu cầu LLM trả lời theo câu 1, câu 3, hay câu 7?",
+        "input": "câu 1",
+        "output": "câu 1",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.3859649122807018,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.23076923076923075,
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.22727272727272727,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.21739130434782608,
+            "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:": 0.21052631578947367,
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.19047619047619052,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.1818181818181818,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.17777777777777778,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.17777777777777778
+        },
+        "avg_similarity_score": 0.14730587178202376
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"",
+        "input": "",
+        "output": "Mục đích của kỳ thi VSTEP là đánh giá năng lực tiếng Anh theo Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam, với mục tiêu hỗ trợ giáo dục, công việc và chứng chỉ chức vụ. VSTEP nhằm cung cấp đánh giá chính xác về trình độ tiếng Anh của người tham gia, giúp người dùng xác định được trình độ ngôn ngữ của mình và tăng cường khả năng giao tiếp trong các ngữ cảnh khác nhau.",
+        "most_similar_instructions": {
+            "Kỳ thi VSTEP là gì và mục đích của kỳ thi này là gì?": 0.5882352941176471,
+            "Kỳ thi VSTEP là gì?": 0.45454545454545453,
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.40816326530612246,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.33333333333333337,
+            "Câu hỏi này yêu cầu LLM trả lời theo câu 1, câu 3, hay câu 7?": 0.3333333333333333,
+            "Chỉ ra những điểm khác nhau giữa VSTEP và IELTS": 0.3225806451612903,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.31578947368421056,
+            "Tại sao nên tham gia kỳ thi VSTEP?": 0.29629629629629634,
+            "Kỳ thi VSTEP bao gồm thời gian nào?": 0.2857142857142857
+        },
+        "avg_similarity_score": 0.2670959565540793
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"",
+        "input": "",
+        "output": "Không, không phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc. Chứng chỉ VSTEP chủ yếu được yêu cầu ở các trường đại học, tổ chức và cơ quan ở Việt Nam. Trong một số trường hợp, chứng chỉ tiếng Anh khác như IELTS hoặc TOEFL có thể được chấp nhận để đáp ứng yêu cầu công việc. Tuy nhiên, trong nhiều trường hợp, chứng chỉ VSTEP được ưu tiên do được công nhận bởi Bộ Giáo dục và Đào tạo.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.6153846153846154,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.44,
+            "Câu hỏi này yêu cầu LLM trả lời theo câu 1, câu 3, hay câu 7?": 0.37931034482758624,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.37037037037037035,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.3255813953488372,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.30188679245283023,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.30188679245283023,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.30188679245283023,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.3,
+            "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:": 0.2769230769230769
+        },
+        "avg_similarity_score": 0.23604695401769824
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Tôi có thể sử dụng chứng chỉ VSTEP để du học, không?\"",
+        "input": "Tôi muốn du học tại quốc gia sử dụng tiếng Anh",
+        "output": "Không, chứng chỉ VSTEP không đủ để du học tại quốc gia sử dụng tiếng Anh. Chứng chỉ VSTEP chỉ được công nhận trong nước và không được chấp nhận bởi các trường đại học quốc tế. Nếu bạn muốn du học tại quốc gia sử dụng tiếng Anh, bạn cần phải có chứng chỉ tiếng Anh quốc tế như IELTS hoặc TOEFL, và đáp ứng các yêu cầu du học khác.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.6181818181818182,
+            "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"": 0.5714285714285715,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.5454545454545454,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.5,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.37209302325581395,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.37209302325581395,
+            "VSTEP sẽ được sử dụng trong trường hợp nào?": 0.33333333333333337,
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.3333333333333333,
+            "Bạn có thể kiểm soát giờ nghỉ của sinh viên bằng VSTEP không?": 0.3255813953488372,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.31999999999999995
+        },
+        "avg_similarity_score": 0.27208074922119974
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Tôi có cần chứng chỉ VSTEP để được nhận vào một trường đại học Việt Nam không?\"",
+        "input": "Tôi muốn học tại trường đại học quốc tế ở Việt Nam",
+        "output": "Không, chứng chỉ VSTEP không bắt buộc đối với việc nhận vào một trường đại học quốc tế ở Việt Nam. Trường đại học quốc tế thường yêu cầu chứng chỉ tiếng Anh quốc tế như IELTS hoặc TOEFL để đảm bảo trình độ tiếng Anh của sinh viên. Chứng chỉ VSTEP chỉ được chấp nhận bởi một số trường đại học Việt Nam, và điều đó có thể tùy thuộc vào chương trình và yêu cầu của từng trường.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"Tôi có thể sử dụng chứng chỉ VSTEP để du học, không?\"": 0.6428571428571429,
+            "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"": 0.5757575757575758,
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.5538461538461538,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.40740740740740733,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.39999999999999997,
+            "Chứng chỉ VSTEP có giá trị như thế nào so với chứng chỉ chỉ IELTS?": 0.38461538461538464,
+            "Khung năng lực ngoại ngữ 6 bậc dành cho Việt Nam là gì?": 0.34615384615384615,
+            "Có thể bật thuật toán xác thực sinh viên bằng VSTEP không?": 0.339622641509434,
+            "Bạn có thể quản lý sinh viên đăng ký học các khóa học nào bằng VSTEP không?": 0.3333333333333333
+        },
+        "avg_similarity_score": 0.2868615667261115
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Tôi muốn thi VSTEP để có chứng chỉ, nhưng tôi chưa biết yêu cầu để đăng ký\"",
+        "input": "Tôi thiếu yêu cầu đăng ký",
+        "output": "Để đăng ký thi VSTEP, bạn cần:\n1. Đọc kỹ thông tin đăng ký trên website của VSTEP hoặc liên hệ trực tiếp với trung tâm thi.\n2. Đảm bảo bạn đáp ứng yêu cầu về trình độ tiếng Anh và độ tuổi.\n3. Chọn thời gian và địa điểm thi phù hợp.\n4. Điền đủ thông tin vào phiếu đăng ký.\n5. Nộp phí thi và các tài liệu yêu cầu.\n6. Kiểm tra lại thông tin trước khi đăng ký.\nLưu ý: Yêu cầu đăng ký có thể thay đổi theo thời gian, vì vậy bạn nên kiểm tra thông tin cập nhật trên website của VSTEP.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"Tôi có thể sử dụng chứng chỉ VSTEP để du học, không?\"": 0.5925925925925926,
+            "Trả lời câu hỏi \"Tôi có cần chứng chỉ VSTEP để được nhận vào một trường đại học Việt Nam không?\"": 0.5625,
+            "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"": 0.5625,
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.5079365079365079,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.4583333333333333,
+            "Câu hỏi này yêu cầu LLM trả lời theo câu 1, câu 3, hay câu 7?": 0.3571428571428571,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.34615384615384615,
+            "Kỳ thi VSTEP được sử dụng để đánh giá năng lực tiếng Anh của ai?": 0.31999999999999995,
+            "Chứng chỉ VSTEP dùng được bao lâu?": 0.2926829268292683,
+            "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:": 0.28571428571428575
+        },
+        "avg_similarity_score": 0.2699791127676183
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Tôi không hiểu tại sao tôi không có chứng chỉ tiếng Anh, có thể nói về một số lý do khác nhau?\"",
+        "input": "Tôi không có chứng chỉ tiếng Anh",
+        "output": "Có nhiều lý do dẫn đến việc bạn không có chứng chỉ tiếng Anh, bao gồm:\n1. Bạn chưa từng thi hoặc không thi chứng chỉ tiếng Anh.\n2. Bạn thi chứng chỉ tiếng Anh nhưng không đạt yêu cầu.\n3. Bạn chọn thi chứng chỉ tiếng Anh quốc tế như IELTS, TOEFL thay vì VSTEP.\n4. Bạn không quan tâm đến chứng chỉ tiếng Anh hoặc không nhận thấy tầm quan trọng của nó trong quá khứ.\n5. Bạn không có thời gian hoặc điều kiện để thi chứng chỉ tiếng Anh.\n6. Bạn không biết về chứng chỉ tiếng Anh hoặc không hiểu tầm quan trọng của nó.\n7. Bạn không có đủ kinh phí để thi chứng chỉ tiếng Anh.\n8. Yêu cầu công việc hoặc trường học yêu cầu chứng chỉ tiếng Anh nhưng bạn không biết về nó.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"Tôi có cần chứng chỉ VSTEP để được nhận vào một trường đại học Việt Nam không?\"": 0.5205479452054794,
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.5,
+            "Trả lời câu hỏi \"Tôi muốn thi VSTEP để có chứng chỉ, nhưng tôi chưa biết yêu cầu để đăng ký\"": 0.47887323943661964,
+            "Trả lời câu hỏi \"Tôi có thể sử dụng chứng chỉ VSTEP để du học, không?\"": 0.4761904761904762,
+            "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"": 0.4657534246575342,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.3859649122807018,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.32786885245901637,
+            "Nhận xét về khả năng tiếng Anh của sinh viên Việt Nam": 0.30508474576271183,
+            "Những loại chứng chỉ nào có giá trị sau 2 năm kể từ ngày thi?": 0.2950819672131147,
+            "Trong một bài viết về kỳ thi VSTEP, hãy viết một câu bằng tiếng Việt theo ngữ pháp cho trước:": 0.2777777777777778
+        },
+        "avg_similarity_score": 0.24320280825268678
+    },
+    {
+        "instruction": "Trả lời câu hỏi \"Tôi có thể kiểm tra thông tin VSTEP ở đâu?\"",
+        "input": "",
+        "output": "Để kiểm tra thông tin VSTEP, bạn có thể:\n1. Truy cập trang web chính thức của VSTEP tại địa chỉ [website VSTEP].\n2. Liên hệ trực tiếp với Trung tâm Sách của VSTEP hoặc Trung tâm Khảo thí.\n3. Kiểm tra các tài liệu VSTEP được phát hành bởi Bộ Giáo dục và Đào tạo.\n4. Tìm kiếm thông tin về VSTEP trên các trang web học thuật, giáo dục hoặc tài liệu liên quan.\nTất cả các nguồn thông tin này đều có thể giúp bạn tìm hiểu thông tin chi tiết về kỳ thi VSTEP.",
+        "most_similar_instructions": {
+            "Trả lời câu hỏi \"Tôi có thể sử dụng chứng chỉ VSTEP để du học, không?\"": 0.6190476190476191,
+            "Trả lời câu hỏi \"Mục đích của kỳ thi VSTEP là gì?\"": 0.5,
+            "Trả lời câu hỏi \"Tôi muốn thi VSTEP để có chứng chỉ, nhưng tôi chưa biết yêu cầu để đăng ký\"": 0.48000000000000004,
+            "Trả lời câu hỏi \"nếu tôi là giáo viên, có phải tôi cũng cần chứng chỉ VSTEP hay không?\"": 0.47058823529411764,
+            "Trả lời câu hỏi \"Có phải mọi người đều cần chứng chỉ VSTEP để đáp ứng yêu cầu công việc không?\"": 0.46153846153846156,
+            "Trả lời câu hỏi \"Tôi có cần chứng chỉ VSTEP để được nhận vào một trường đại học Việt Nam không?\"": 0.46153846153846156,
+            "Trả lời câu hỏi \"Tôi không hiểu tại sao tôi không có chứng chỉ tiếng Anh, có thể nói về một số lý do khác nhau?\"": 0.4067796610169491,
+            "Bạn có thể quản lý sinh viên có điểm thấp bằng VSTEP không?": 0.358974358974359,
+            "Có bao nhiêu trường đại học tại Việt Nam sử dụng chứng chỉ VSTEP?": 0.35,
+            "Câu hỏi này yêu cầu LLM trả lời theo câu 1, câu 3, hay câu 7?": 0.3181818181818182
+        },
+        "avg_similarity_score": 0.250231296404719
+    }
+]

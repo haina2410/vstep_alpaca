@@ -20,13 +20,15 @@ import numpy as np
 import tqdm
 from rouge_score import rouge_scorer
 import utils
+import utils_together
+import logging
 
 import fire
 
 
 def encode_prompt(prompt_instructions):
     """Encode multiple prompt instructions into a single string."""
-    prompt = open("./prompt.txt").read() + "\n"
+    prompt = open("./prompt_vi.txt").read() + "\n"
 
     for idx, task_dict in enumerate(prompt_instructions):
         (instruction, input, output) = task_dict["instruction"], task_dict["input"], task_dict["output"]
@@ -41,9 +43,10 @@ def encode_prompt(prompt_instructions):
     return prompt
 
 
-def post_process_gpt3_response(num_prompt_instructions, response):
-    if response is None:
+def post_process_response(num_prompt_instructions, response):
+    if response['choices'] is None:
         return []
+    response = response['choices'][0]
     raw_instructions = f"{num_prompt_instructions+1}. Instruction:" + response["text"]
     raw_instructions = re.split("###", raw_instructions)
     instructions = []
@@ -64,25 +67,21 @@ def post_process_gpt3_response(num_prompt_instructions, response):
         if len(inst.split()) <= 3 or len(inst.split()) > 150:
             continue
         # filter based on keywords that are not suitable for language models.
-        blacklist = [
-            "image",
-            "images",
-            "graph",
-            "graphs",
-            "picture",
-            "pictures",
+        blacklist = [          
+            # vietnamese
+            "hình ảnh",
+            "đồ thị",
+            "hình",
             "file",
-            "files",
-            "map",
-            "maps",
-            "draw",
-            "plot",
-            "go to",
+            "bản đồ",
+            "vẽ",
+            "minh họa",
+            "đi đến",
             "video",
-            "audio",
-            "music",
-            "flowchart",
-            "diagram",
+            "âm thanh",
+            "nhạc",
+            "biểu đồ",
+            "sơ đồ"
         ]
         blacklist += []
         if any(find_word_in_string(word, inst) for word in blacklist):
@@ -91,7 +90,7 @@ def post_process_gpt3_response(num_prompt_instructions, response):
         # And it's a bit comfusing whether the model need to write a program or directly output the result.
         # Here we filter them out.
         # Note this is not a comprehensive filtering for all programming instructions.
-        if inst.startswith("Write a program"):
+        if inst.startswith("Write a program") or inst.startswith("Viết một chương trình"):
             continue
         # filter those starting with punctuation
         if inst[0] in string.punctuation:
@@ -109,14 +108,14 @@ def find_word_in_string(w, s):
 
 def generate_instruction_following_data(
     output_dir="./",
-    seed_tasks_path="./seed_tasks.jsonl",
-    num_instructions_to_generate=100,
-    model_name="text-davinci-003",
+    seed_tasks_path="./vstep_seed_tasks.jsonl",
+    num_instructions_to_generate=10,
+    model_name="meta-llama/Llama-Vision-Free",
     num_prompt_instructions=3,
     request_batch_size=5,
-    temperature=1.0,
+    temperature=0.8,
     top_p=1.0,
-    num_cpus=16,
+    num_cpus=8,
 ):
     seed_tasks = [json.loads(l) for l in open(seed_tasks_path, "r")]
     seed_instruction_data = [
@@ -156,28 +155,32 @@ def generate_instruction_following_data(
             prompt_instructions = random.sample(seed_instruction_data, num_prompt_instructions)
             prompt = encode_prompt(prompt_instructions)
             batch_inputs.append(prompt)
-        decoding_args = utils.OpenAIDecodingArguments(
+        decoding_args = utils_together.TogetherDecodingArguments(
             temperature=temperature,
             n=1,
             max_tokens=3072,  # hard-code to maximize the length. the requests will be automatically adjusted
             top_p=top_p,
             stop=["\n20", "20.", "20."],
         )
+        logging.info(f"Request {request_idx} with {len(batch_inputs)} prompts")
         request_start = time.time()
-        results = utils.openai_completion(
+        results = utils_together.together_completion(
             prompts=batch_inputs,
             model_name=model_name,
             batch_size=request_batch_size,
             decoding_args=decoding_args,
-            logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
+            # logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
         )
         request_duration = time.time() - request_start
 
         process_start = time.time()
         instruction_data = []
+
         for result in results:
-            new_instructions = post_process_gpt3_response(num_prompt_instructions, result)
+            new_instructions = post_process_response(num_prompt_instructions, result)
             instruction_data += new_instructions
+
+        logging.info(f"Generated {len(instruction_data)} instructions")
 
         total = len(instruction_data)
         keep = 0
