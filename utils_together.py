@@ -1,6 +1,8 @@
-import together
-from typing import Optional, Sequence, Union
+from together import Together
+from together.types import ChatCompletionResponse
+from typing import List, Optional, Sequence, Union
 from dataclasses import dataclass
+from torch import le
 import tqdm
 import math
 import logging
@@ -11,6 +13,9 @@ import sys
 
 dotenv.load_dotenv()
 
+together = Together()
+
+
 @dataclass
 class TogetherDecodingArguments:
     max_tokens: int = 1800
@@ -18,9 +23,10 @@ class TogetherDecodingArguments:
     top_p: float = 1.0
     n: int = 1
     stream: bool = False
-    stop: Optional[Sequence[str]] = None
+    stop: Optional[List[str]] = None
     frequency_penalty: float = 0.0
     presence_penalty: float = 0.0
+
 
 def together_completion(
     prompts: Union[str, Sequence[str], Sequence[dict[str, str]], dict[str, str]],
@@ -33,7 +39,7 @@ def together_completion(
     **decoding_kwargs,
 ):
     """Complete prompts using Together's API with Llama model"""
-    
+
     is_single_prompt = isinstance(prompts, (str, dict))
     if is_single_prompt:
         prompts = [prompts]
@@ -52,8 +58,17 @@ def together_completion(
         while True:
             try:
                 for prompt in prompt_batch:
-                    response = together.Complete.create(
-                        prompt=prompt,
+                    response = together.chat.completions.create(
+                        messages=[
+                            {
+                                "role": "system",
+                                "content": open("system_prompt.txt", "r").read(),
+                            },
+                            {
+                                "role": "user",
+                                "content": prompt,
+                            },
+                        ],
                         model=model_name,
                         max_tokens=batch_decoding_args.max_tokens,
                         temperature=batch_decoding_args.temperature,
@@ -62,13 +77,24 @@ def together_completion(
                         stop=batch_decoding_args.stop,
                         frequency_penalty=batch_decoding_args.frequency_penalty,
                         presence_penalty=batch_decoding_args.presence_penalty,
-                        **decoding_kwargs
+                        **decoding_kwargs,
                     )
-                    
-                    if return_text:
-                        completions.append(response['output']['choices'][0]['text'])
+
+                    if isinstance(response, ChatCompletionResponse):
+                        if return_text and response.choices:
+                            completions.append(response.choices[0].message.content)
+                        else:
+                            completions.append(response)
                     else:
-                        completions.append(response)
+                        for chunk in response:
+                            if return_text and chunk.choices:
+                                completions.append(chunk.choices[0].message.content)
+                            else:
+                                completions.append(chunk)
+
+                    open(f"completions/result_{len(completions)}.txt", "w").write(
+                        completions[-1].choices[0].message.content
+                    )
                 break
             except Exception as e:
                 logging.warning(f"Together API Error: {e}")
@@ -78,5 +104,5 @@ def together_completion(
         completions = [completions[i : i + decoding_args.n] for i in range(0, len(completions), decoding_args.n)]
     if is_single_prompt:
         (completions,) = completions
-        
+
     return completions

@@ -1,0 +1,10 @@
+Hãy tiếp tục generate theo yêu cầu và không nhận xét gì thêm. Ví dụ:
+###
+User: Liệt kê 6 phát minh quan trọng nhất trong lịch sử.
+1. Bánh xe
+2. Mạng Internet
+3. Điện thoại di động
+###
+Model: 4. Máy tính cá nhân
+5. Máy bay
+6. Bóng đèn

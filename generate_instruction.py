@@ -7,6 +7,7 @@ python -m generate_instruction generate_instruction_following_data \
   --num_instructions_to_generate 10 \
   --model_name="text-davinci-003" \
 """
+
 import time
 import json
 import os
@@ -30,32 +31,36 @@ def encode_prompt(prompt_instructions):
     """Encode multiple prompt instructions into a single string."""
     prompt = open("./prompt_vi.txt").read() + "\n"
 
+    sources = os.listdir("sources/")
+    source = open(f"sources/{random.choice(sources)}").read()
+    prompt += source + "\n#######################\n" + "Danh sách 20 câu hỏi:\n"
+
     for idx, task_dict in enumerate(prompt_instructions):
         (instruction, input, output) = task_dict["instruction"], task_dict["input"], task_dict["output"]
         instruction = re.sub(r"\s+", " ", instruction).strip().rstrip(":")
         input = "<noinput>" if input.lower() == "" else input
         prompt += f"###\n"
-        prompt += f"{idx + 1}. Instruction: {instruction}\n"
+        prompt += f"{idx + 1}. Câu hỏi: {instruction}\n"
         prompt += f"{idx + 1}. Input:\n{input}\n"
         prompt += f"{idx + 1}. Output:\n{output}\n"
     prompt += f"###\n"
-    prompt += f"{idx + 2}. Instruction:"
+    prompt += f"{idx + 2}. Câu hỏi:"
     return prompt
 
 
 def post_process_response(num_prompt_instructions, response):
-    if response['choices'] is None:
+    if response.choices is None:
         return []
-    response = response['choices'][0]
-    raw_instructions = f"{num_prompt_instructions+1}. Instruction:" + response["text"]
+    response = response.choices[0]
+    raw_instructions = f"{num_prompt_instructions+1}. Câu hỏi:" + response.message.content
     raw_instructions = re.split("###", raw_instructions)
     instructions = []
     for idx, inst in enumerate(raw_instructions):
         # if the decoding stops due to length, the last example is likely truncated so we discard it
-        if idx == len(raw_instructions) - 1 and response["finish_reason"] == "length":
+        if idx == len(raw_instructions) - 1 and response.finish_reason == "length":
             continue
         idx += num_prompt_instructions + 1
-        splitted_data = re.split(f"{idx}\.\s+(Instruction|Input|Output):", inst)
+        splitted_data = re.split(f"{idx}\.\s+(Câu hỏi|Input|Output):", inst)
         if len(splitted_data) != 7:
             continue
         else:
@@ -67,7 +72,7 @@ def post_process_response(num_prompt_instructions, response):
         if len(inst.split()) <= 3 or len(inst.split()) > 150:
             continue
         # filter based on keywords that are not suitable for language models.
-        blacklist = [          
+        blacklist = [
             # vietnamese
             "hình ảnh",
             "đồ thị",
@@ -81,7 +86,7 @@ def post_process_response(num_prompt_instructions, response):
             "âm thanh",
             "nhạc",
             "biểu đồ",
-            "sơ đồ"
+            "sơ đồ",
         ]
         blacklist += []
         if any(find_word_in_string(word, inst) for word in blacklist):
@@ -109,8 +114,8 @@ def find_word_in_string(w, s):
 def generate_instruction_following_data(
     output_dir="./",
     seed_tasks_path="./vstep_seed_tasks.jsonl",
-    num_instructions_to_generate=10,
-    model_name="meta-llama/Llama-Vision-Free",
+    num_instructions_to_generate=200,
+    model_name="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
     num_prompt_instructions=3,
     request_batch_size=5,
     temperature=0.8,
@@ -169,7 +174,7 @@ def generate_instruction_following_data(
             model_name=model_name,
             batch_size=request_batch_size,
             decoding_args=decoding_args,
-            # logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
+            logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
         )
         request_duration = time.time() - request_start
 

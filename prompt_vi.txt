@@ -1,12 +1,13 @@
-Bạn được yêu cầu đưa ra một tập hợp 20 câu hỏi liên quan tới kỳ thi VSTEP. Các câu hỏi này sẽ được cung cấp cho một LLM và chúng tôi sẽ đánh giá LLM đó về khả năng hoàn thành các câu hỏi.
+Bạn được yêu cầu đưa ra một tập hợp 20 câu hỏi liên quan tới kỳ thi VSTEP từ nguồn dữ liệu Markdown sau. Các câu hỏi này sẽ được cung cấp cho một LLM và chúng tôi sẽ đánh giá LLM đó về khả năng hoàn thành các câu hỏi.
 
 Điều kiện bắt buộc:
-1. Cố gắng không lặp lại danh từ trong mỗi câu hỏi để tối đa hóa tính đa dạng.
-2. Ngữ pháp được sử dụng cho các câu hỏi nên đa dạng. Ví dụ, bạn nên kết hợp các câu hỏi với các câu mệnh lệnh.
+1. Cố gắng không lặp lại kiến thức trong mỗi câu hỏi để tối đa hóa tính đa dạng.
+2. Ngữ pháp được sử dụng cho các câu hỏi nên đa dạng. Ví dụ, bạn nên kết hợp các câu hỏi với các câu mệnh lệnh (liệt kê, so sánh...).
 3. Một LLM phải có khả năng hoàn thành câu hỏi. Ví dụ, không yêu cầu LLM tạo ra bất kỳ đầu ra hình ảnh hoặc âm thanh nào. Một ví dụ khác, không yêu cầu LLM đánh thức bạn lúc 5 giờ chiều hoặc đặt lời nhắc, vì nó không thể thực hiện các hành động đó.
 4. Các câu hỏi phải bằng tiếng Việt, có thể sử dụng tiếng Anh cho những danh từ riêng không tồn tại trong tiếng Việt.
 5. Các câu hỏi nên dài 1 đến 2 câu. Có thể sử dụng câu mệnh lệnh hoặc câu hỏi.
-6. Bạn nên tạo đầu vào phù hợp cho mỗi câu hỏi. Trường đầu vào phải chứa một ví dụ cụ thể được cung cấp cho câu hỏi. Nó nên bao gồm dữ liệu thực tế và không chứa các chỗ trống đơn giản. Đầu vào nên cung cấp nội dung đủ để làm cho câu hỏi trở nên khó nhưng không nên vượt quá 100 từ.
-7. Không phải tất cả các câu hỏi đều yêu cầu đầu vào. Ví dụ, khi một câu hỏi yêu cầu thông tin chung, như "Mục đích của kỳ thi VSTEP là gì?", không cần cung cấp ngữ cảnh cụ thể. Trong trường hợp này, bạn chỉ cần đặt "<noinput>" vào trường đầu vào.
+6. Bạn nên tạo input phù hợp cho mỗi câu hỏi. Trường input phải chứa một ví dụ cụ thể được cung cấp cho câu hỏi. Nó nên bao gồm dữ liệu thực tế và không chứa các chỗ trống đơn giản. input nên cung cấp nội dung đủ để làm cho câu hỏi trở nên khó nhưng không nên vượt quá 150 từ.
+7. Không phải tất cả các câu hỏi đều yêu cầu input. Ví dụ, khi một câu hỏi yêu cầu thông tin chung, như "Mục đích của kỳ thi VSTEP là gì?", không cần cung cấp ngữ cảnh cụ thể. Trong trường hợp này, bạn chỉ cần đặt "<noinput>" vào trường input.
 
-Danh sách 20 nhiệm vụ:
+Nguồn dữ liệu Markdown:
+#######################
