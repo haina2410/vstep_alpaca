@@ -13,98 +13,17 @@ import json
 import os
 import random
 import re
-import string
 from functools import partial
 from multiprocessing import Pool
 
 import numpy as np
 import tqdm
 from rouge_score import rouge_scorer
-import utils
-import utils_together
+import utils.openai_old as openai_old
+import utils.together_completion as utils_together
 import logging
 
 import fire
-
-
-def encode_prompt(prompt_instructions):
-    """Encode multiple prompt instructions into a single string."""
-    prompt = open("./prompt_vi.txt").read() + "\n"
-
-    sources = os.listdir("sources/")
-    source = open(f"sources/{random.choice(sources)}").read()
-    prompt += source + "\n#######################\n" + "Danh sách 20 câu hỏi:\n"
-
-    for idx, task_dict in enumerate(prompt_instructions):
-        (instruction, input, output) = task_dict["instruction"], task_dict["input"], task_dict["output"]
-        instruction = re.sub(r"\s+", " ", instruction).strip().rstrip(":")
-        input = "<noinput>" if input.lower() == "" else input
-        prompt += f"###\n"
-        prompt += f"{idx + 1}. Câu hỏi: {instruction}\n"
-        prompt += f"{idx + 1}. Input:\n{input}\n"
-        prompt += f"{idx + 1}. Output:\n{output}\n"
-    prompt += f"###\n"
-    prompt += f"{idx + 2}. Câu hỏi:"
-    return prompt
-
-
-def post_process_response(num_prompt_instructions, response):
-    if response.choices is None:
-        return []
-    response = response.choices[0]
-    raw_instructions = f"{num_prompt_instructions+1}. Câu hỏi:" + response.message.content
-    raw_instructions = re.split("###", raw_instructions)
-    instructions = []
-    for idx, inst in enumerate(raw_instructions):
-        # if the decoding stops due to length, the last example is likely truncated so we discard it
-        if idx == len(raw_instructions) - 1 and response.finish_reason == "length":
-            continue
-        idx += num_prompt_instructions + 1
-        splitted_data = re.split(f"{idx}\.\s+(Câu hỏi|Input|Output):", inst)
-        if len(splitted_data) != 7:
-            continue
-        else:
-            inst = splitted_data[2].strip()
-            input = splitted_data[4].strip()
-            input = "" if input.lower() == "<noinput>" else input
-            output = splitted_data[6].strip()
-        # filter out too short or too long instructions
-        if len(inst.split()) <= 3 or len(inst.split()) > 150:
-            continue
-        # filter based on keywords that are not suitable for language models.
-        blacklist = [
-            # vietnamese
-            "hình ảnh",
-            "đồ thị",
-            "hình",
-            "file",
-            "bản đồ",
-            "vẽ",
-            "minh họa",
-            "đi đến",
-            "video",
-            "âm thanh",
-            "nhạc",
-            "biểu đồ",
-            "sơ đồ",
-        ]
-        blacklist += []
-        if any(find_word_in_string(word, inst) for word in blacklist):
-            continue
-        # We found that the model tends to add "write a program" to some existing instructions, which lead to a lot of such instructions.
-        # And it's a bit comfusing whether the model need to write a program or directly output the result.
-        # Here we filter them out.
-        # Note this is not a comprehensive filtering for all programming instructions.
-        if inst.startswith("Write a program") or inst.startswith("Viết một chương trình"):
-            continue
-        # filter those starting with punctuation
-        if inst[0] in string.punctuation:
-            continue
-        # filter those starting with non-english character
-        if not inst[0].isascii():
-            continue
-        instructions.append({"instruction": inst, "input": input, "output": output})
-    return instructions
 
 
 def find_word_in_string(w, s):
@@ -114,10 +33,10 @@ def find_word_in_string(w, s):
 def generate_instruction_following_data(
     output_dir="./",
     seed_tasks_path="./vstep_seed_tasks.jsonl",
-    num_instructions_to_generate=200,
-    model_name="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+    num_instructions_to_generate=700,
+    model_name="meta-llama/Llama-Vision-Free",
     num_prompt_instructions=3,
-    request_batch_size=5,
+    request_batch_size=1,
     temperature=0.8,
     top_p=1.0,
     num_cpus=8,
@@ -134,7 +53,7 @@ def generate_instruction_following_data(
     # load the LM-generated instructions
     machine_instruction_data = []
     if os.path.exists(os.path.join(output_dir, "regen.json")):
-        machine_instruction_data = utils.jload(os.path.join(output_dir, "regen.json"))
+        machine_instruction_data = openai_old.jload(os.path.join(output_dir, "regen.json"))
         print(f"Loaded {len(machine_instruction_data)} machine-generated instructions")
 
     # similarities = {}
@@ -155,10 +74,11 @@ def generate_instruction_following_data(
         request_idx += 1
 
         batch_inputs = []
-        for _ in range(request_batch_size):
+        for i in range(request_batch_size):
             # only sampling from the seed tasks
             prompt_instructions = random.sample(seed_instruction_data, num_prompt_instructions)
-            prompt = encode_prompt(prompt_instructions)
+            prompt = utils_together.encode_prompt(prompt_instructions, request_idx)
+            open(f"completions/prompt_{request_idx}.txt", "w").write(prompt)
             batch_inputs.append(prompt)
         decoding_args = utils_together.TogetherDecodingArguments(
             temperature=temperature,
@@ -169,6 +89,8 @@ def generate_instruction_following_data(
         )
         logging.info(f"Request {request_idx} with {len(batch_inputs)} prompts")
         request_start = time.time()
+
+        """Normal completion"""
         results = utils_together.together_completion(
             prompts=batch_inputs,
             model_name=model_name,
@@ -176,19 +98,31 @@ def generate_instruction_following_data(
             decoding_args=decoding_args,
             logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
         )
-        request_duration = time.time() - request_start
-
-        process_start = time.time()
         instruction_data = []
 
         for result in results:
-            new_instructions = post_process_response(num_prompt_instructions, result)
+            new_instructions = utils_together.post_process_response(num_prompt_instructions, result)
             instruction_data += new_instructions
-
-        logging.info(f"Generated {len(instruction_data)} instructions")
-
         total = len(instruction_data)
+
+        """JSON response"""
+        # instruction_data = utils_together.together_completion(
+        #     prompts=batch_inputs,
+        #     model_name=model_name,
+        #     batch_size=request_batch_size,
+        #     request_idx=request_idx,
+        #     decoding_args=decoding_args,
+        #     # logit_bias={"50256": -100},  # prevent the <|endoftext|> token from being generated
+        # )
+
+        # total = len(instruction_data)
+        # instruction_data = utils_together.post_process_response(num_prompt_instructions, instruction_data)
+
+        request_duration = time.time() - request_start
+
         keep = 0
+        process_start = time.time()
+
         for instruction_data_entry in instruction_data:
             # computing similarity with the pre-tokenzied instructions
             new_instruction_tokens = scorer._tokenizer.tokenize(instruction_data_entry["instruction"])
@@ -211,10 +145,12 @@ def generate_instruction_following_data(
             all_instructions.append(instruction_data_entry["instruction"])
             all_instruction_tokens.append(new_instruction_tokens)
             progress_bar.update(1)
+
         process_duration = time.time() - process_start
+
         print(f"Request {request_idx} took {request_duration:.2f}s, processing took {process_duration:.2f}s")
         print(f"Generated {total} instructions, kept {keep} instructions")
-        utils.jdump(machine_instruction_data, os.path.join(output_dir, "regen.json"))
+        openai_old.jdump(machine_instruction_data, os.path.join(output_dir, "regen.json"))
 
 
 def main(task, **kwargs):

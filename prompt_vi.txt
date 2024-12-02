@@ -8,6 +8,8 @@ Bạn được yêu cầu đưa ra một tập hợp 20 câu hỏi liên quan t�
 5. Các câu hỏi nên dài 1 đến 2 câu. Có thể sử dụng câu mệnh lệnh hoặc câu hỏi.
 6. Bạn nên tạo input phù hợp cho mỗi câu hỏi. Trường input phải chứa một ví dụ cụ thể được cung cấp cho câu hỏi. Nó nên bao gồm dữ liệu thực tế và không chứa các chỗ trống đơn giản. input nên cung cấp nội dung đủ để làm cho câu hỏi trở nên khó nhưng không nên vượt quá 150 từ.
 7. Không phải tất cả các câu hỏi đều yêu cầu input. Ví dụ, khi một câu hỏi yêu cầu thông tin chung, như "Mục đích của kỳ thi VSTEP là gì?", không cần cung cấp ngữ cảnh cụ thể. Trong trường hợp này, bạn chỉ cần đặt "<noinput>" vào trường input.
+8. Bạn nên tạo output phù hợp cho mỗi câu hỏi. Trường output nên chứa câu trả lời cụ thể cho câu hỏi. output nên chứa từ 1 đến 3 câu.
+9. Bạn phải trả lời dưới dạng JSON.
 
 Nguồn dữ liệu Markdown:
 #######################
